@@ -109,6 +109,7 @@ extension FriendsViewController {
 }
 
 extension FriendsViewController: UISplitViewControllerDelegate {
+    //To show this viewcontroller in first time
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }

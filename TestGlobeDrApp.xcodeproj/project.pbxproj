@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CA1CA4D29E3E38D22479C65 /* Pods_TestGlobeDrApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBEDC26292AA7F8DCAC54F0 /* Pods_TestGlobeDrApp.framework */; };
 		9C7B8E242140FFE000AD3FE3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7B8E232140FFE000AD3FE3 /* UserViewModel.swift */; };
 		9C7B8E2A2141001600AD3FE3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7B8E292141001600AD3FE3 /* User.swift */; };
 		9CD072642140D5EA00E1F7DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072632140D5EA00E1F7DD /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CBEDC26292AA7F8DCAC54F0 /* Pods_TestGlobeDrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGlobeDrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7B8E232140FFE000AD3FE3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		9C7B8E292141001600AD3FE3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CD072602140D5EA00E1F7DD /* TestGlobeDrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGlobeDrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,8 @@
 		9CD072A82140E7CD00E1F7DD /* AppIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcons.swift; sourceTree = "<group>"; };
 		9CD072AA2140F58E00E1F7DD /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		9CD072AC2140F5A800E1F7DD /* BaseSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSplitViewController.swift; sourceTree = "<group>"; };
+		EC17619AB77468EECF58E5E4 /* Pods-TestGlobeDrApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGlobeDrApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestGlobeDrApp/Pods-TestGlobeDrApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FA11E47920E0EC9084F85214 /* Pods-TestGlobeDrApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGlobeDrApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestGlobeDrApp/Pods-TestGlobeDrApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +79,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA1CA4D29E3E38D22479C65 /* Pods_TestGlobeDrApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75744CEE7DE8697C23961C50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC17619AB77468EECF58E5E4 /* Pods-TestGlobeDrApp.debug.xcconfig */,
+				FA11E47920E0EC9084F85214 /* Pods-TestGlobeDrApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9C7B8E272140FFF500AD3FE3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +111,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9C7B8E2B21410CCC00AD3FE3 /* FriendsVC */ = {
+			isa = PBXGroup;
+			children = (
+				9CD072752140D6DB00E1F7DD /* FriendsTableView.swift */,
+				9CD072792140D86000E1F7DD /* FriendsTableViewCell.swift */,
+			);
+			path = FriendsVC;
+			sourceTree = "<group>";
+		};
 		9CD072572140D5EA00E1F7DD = {
 			isa = PBXGroup;
 			children = (
 				9CD072622140D5EA00E1F7DD /* TestGlobeDrApp */,
 				9CD072612140D5EA00E1F7DD /* Products */,
+				75744CEE7DE8697C23961C50 /* Pods */,
+				FBC52FE923260C0FD0E92E8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,8 +226,7 @@
 		9CD0729F2140DC0900E1F7DD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9CD072752140D6DB00E1F7DD /* FriendsTableView.swift */,
-				9CD072792140D86000E1F7DD /* FriendsTableViewCell.swift */,
+				9C7B8E2B21410CCC00AD3FE3 /* FriendsVC */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +253,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		FBC52FE923260C0FD0E92E8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CBEDC26292AA7F8DCAC54F0 /* Pods_TestGlobeDrApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CD072722140D5EA00E1F7DD /* Build configuration list for PBXNativeTarget "TestGlobeDrApp" */;
 			buildPhases = (
+				938E0DE40CC6E2D033FD69B7 /* [CP] Check Pods Manifest.lock */,
 				9CD0725C2140D5EA00E1F7DD /* Sources */,
 				9CD0725D2140D5EA00E1F7DD /* Frameworks */,
 				9CD0725E2140D5EA00E1F7DD /* Resources */,
+				E6F4807A4F9F3697529F71E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +328,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		938E0DE40CC6E2D033FD69B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestGlobeDrApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F4807A4F9F3697529F71E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestGlobeDrApp/Pods-TestGlobeDrApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestGlobeDrApp/Pods-TestGlobeDrApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9CD0725C2140D5EA00E1F7DD /* Sources */ = {
@@ -466,11 +539,13 @@
 		};
 		9CD072732140D5EA00E1F7DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC17619AB77468EECF58E5E4 /* Pods-TestGlobeDrApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNY776NMSF;
 				INFOPLIST_FILE = TestGlobeDrApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,11 +559,13 @@
 		};
 		9CD072742140D5EA00E1F7DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA11E47920E0EC9084F85214 /* Pods-TestGlobeDrApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNY776NMSF;
 				INFOPLIST_FILE = TestGlobeDrApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
