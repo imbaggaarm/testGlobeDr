@@ -1,16 +1,16 @@
 PODS:
-  - ObjectMapper (3.3.0)
+  - Kingfisher (4.9.0)
 
 DEPENDENCIES:
-  - ObjectMapper (~> 3.3)
+  - Kingfisher (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - ObjectMapper
+    - Kingfisher
 
 SPEC CHECKSUMS:
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
 
-PODFILE CHECKSUM: dcb2d1976550ec5184e6438ae1dfa2edcc9e7258
+PODFILE CHECKSUM: e5f534266f7087942c03d6fe2651d2be744b8b6c
 
 COCOAPODS: 1.5.3

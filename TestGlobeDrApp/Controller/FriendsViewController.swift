@@ -8,13 +8,15 @@
 
 import UIKit
 
+/// FriendsViewControllerDelegate
 protocol FriendsViewControllerDelegate: class {
     func friendsViewControllerDidSelectUser(friendsVC: FriendsViewController, user: UserViewModel)
 }
 
 class FriendsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     var users: [UserViewModel] = UserViewModel.demo
+    
     
     var delegate: FriendsViewControllerDelegate!
     
@@ -25,6 +27,7 @@ class FriendsViewController: BaseViewController, UITableViewDelegate, UITableVie
         return temp
     }()
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +42,14 @@ class FriendsViewController: BaseViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //Prevent the case that this view controller is showed pop from translucent navigation bar
+        navigationController?.navigationBar.barTintColor = AppColors.defaultNavigationBarColor
+        navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    //MARK: - Navigation Bar
     override func setUpNavigationBar() {
         super.setUpNavigationBar()
         title = "Friends"
@@ -48,13 +59,14 @@ class FriendsViewController: BaseViewController, UITableViewDelegate, UITableVie
     }
     
     @objc func didSelectMenuButton() {
-        
+        //
     }
     
     @objc func didSelectSearchButton() {
-        
+        //
     }
     
+    //MARK: - Layout
     override func setUpLayout() {
         super.setUpLayout()
         
@@ -66,14 +78,7 @@ class FriendsViewController: BaseViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //
-        navigationController?.navigationBar.barTintColor = AppColors.defaultNavigationBarColor
-        navigationController?.navigationBar.isTranslucent = false
-        
-    }
+
 }
 //MARK: - TableView delegate + datasource
 extension FriendsViewController {

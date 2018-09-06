@@ -88,9 +88,7 @@ class FriendsTableViewCell: IMBBaseTableViewCell {
     }
     
     @objc func didTapCheckbox() {
-        defer {
-            checkBox.isSelected = !checkBox.isSelected
-        }
+        checkBox.isSelected = !checkBox.isSelected
         user?.changeSelectedState(to: checkBox.isSelected)
     }
     
