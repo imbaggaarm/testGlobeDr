@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C7B8E242140FFE000AD3FE3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7B8E232140FFE000AD3FE3 /* UserViewModel.swift */; };
+		9C7B8E2A2141001600AD3FE3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7B8E292141001600AD3FE3 /* User.swift */; };
 		9CD072642140D5EA00E1F7DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072632140D5EA00E1F7DD /* AppDelegate.swift */; };
 		9CD072662140D5EA00E1F7DD /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072652140D5EA00E1F7DD /* FriendsViewController.swift */; };
 		9CD072692140D5EA00E1F7DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD072672140D5EA00E1F7DD /* Main.storyboard */; };
@@ -31,9 +33,13 @@
 		9CD072A52140E55300E1F7DD /* IMBInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072A42140E55300E1F7DD /* IMBInsetLabel.swift */; };
 		9CD072A72140E64900E1F7DD /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072A62140E64900E1F7DD /* AppConstants.swift */; };
 		9CD072A92140E7CD00E1F7DD /* AppIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072A82140E7CD00E1F7DD /* AppIcons.swift */; };
+		9CD072AB2140F58E00E1F7DD /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072AA2140F58E00E1F7DD /* SplitViewController.swift */; };
+		9CD072AD2140F5A800E1F7DD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD072AC2140F5A800E1F7DD /* BaseSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C7B8E232140FFE000AD3FE3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		9C7B8E292141001600AD3FE3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CD072602140D5EA00E1F7DD /* TestGlobeDrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGlobeDrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD072632140D5EA00E1F7DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD072652140D5EA00E1F7DD /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,8 @@
 		9CD072A42140E55300E1F7DD /* IMBInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMBInsetLabel.swift; sourceTree = "<group>"; };
 		9CD072A62140E64900E1F7DD /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		9CD072A82140E7CD00E1F7DD /* AppIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcons.swift; sourceTree = "<group>"; };
+		9CD072AA2140F58E00E1F7DD /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		9CD072AC2140F5A800E1F7DD /* BaseSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C7B8E272140FFF500AD3FE3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B8E232140FFE000AD3FE3 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9C7B8E282141000900AD3FE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B8E292141001600AD3FE3 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9CD072572140D5EA00E1F7DD = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +118,8 @@
 			children = (
 				9CD072632140D5EA00E1F7DD /* AppDelegate.swift */,
 				9CD072A02140DFF300E1F7DD /* Resources */,
+				9C7B8E272140FFF500AD3FE3 /* ViewModels */,
+				9C7B8E282141000900AD3FE3 /* Models */,
 				9CD072A12140E00400E1F7DD /* Controller */,
 				9CD0729F2140DC0900E1F7DD /* View */,
 				9CD0727B2140D88000E1F7DD /* IMB Reuse Code */,
@@ -120,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD0727E2140D88000E1F7DD /* BaseViewController.swift */,
+				9CD072AC2140F5A800E1F7DD /* BaseSplitViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +222,7 @@
 		9CD072A12140E00400E1F7DD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9CD072AA2140F58E00E1F7DD /* SplitViewController.swift */,
 				9CD072652140D5EA00E1F7DD /* FriendsViewController.swift */,
 				9CD072A22140E0F200E1F7DD /* FriendDetailViewController.swift */,
 			);
@@ -273,7 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD0729B2140D88000E1F7DD /* ImageCollectionViewCell.swift in Sources */,
+				9C7B8E242140FFE000AD3FE3 /* UserViewModel.swift in Sources */,
 				9CD072662140D5EA00E1F7DD /* FriendsViewController.swift in Sources */,
+				9C7B8E2A2141001600AD3FE3 /* User.swift in Sources */,
 				9CD072932140D88000E1F7DD /* UIView+AutoLayout.swift in Sources */,
 				9CD072782140D77A00E1F7DD /* AppColors.swift in Sources */,
 				9CD0729A2140D88000E1F7DD /* IMBBaseCollectionViewCell.swift in Sources */,
@@ -281,10 +311,12 @@
 				9CD072A52140E55300E1F7DD /* IMBInsetLabel.swift in Sources */,
 				9CD072952140D88000E1F7DD /* Dictionary.swift in Sources */,
 				9CD0727A2140D86000E1F7DD /* FriendsTableViewCell.swift in Sources */,
+				9CD072AD2140F5A800E1F7DD /* BaseSplitViewController.swift in Sources */,
 				9CD072A32140E0F200E1F7DD /* FriendDetailViewController.swift in Sources */,
 				9CD072A92140E7CD00E1F7DD /* AppIcons.swift in Sources */,
 				9CD0729C2140D88000E1F7DD /* IMBBaseTableViewCell.swift in Sources */,
 				9CD0729E2140D92D00E1F7DD /* AppFonts.swift in Sources */,
+				9CD072AB2140F58E00E1F7DD /* SplitViewController.swift in Sources */,
 				9CD072942140D88000E1F7DD /* UIDevice.swift in Sources */,
 				9CD072762140D6DB00E1F7DD /* FriendsTableView.swift in Sources */,
 				9CD072962140D88000E1F7DD /* UIFont.swift in Sources */,

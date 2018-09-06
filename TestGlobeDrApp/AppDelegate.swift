@@ -32,8 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSAttributedStringKey.font: AppFonts.defaultNavigationBarTitleFont
         ]
         
+        let splitViewController = DefaultSplitViewController()
         
-        window?.rootViewController = UINavigationController.init(rootViewController: FriendsViewController())
+        
+        let friendsVC = FriendsViewController()
+        let friendNVC = UINavigationController.init(rootViewController: friendsVC)
+        
+        let detailVC = FriendDetailViewController()
+        let detailNVC = UINavigationController.init(rootViewController: detailVC)
+        
+        splitViewController.viewControllers = [friendNVC, detailNVC]
+
+        
+        window?.rootViewController = splitViewController
         return true
     }
 

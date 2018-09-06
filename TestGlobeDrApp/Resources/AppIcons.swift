@@ -15,5 +15,6 @@ class AppIcons {
     static let shareIcon = UIImage.init(named: "icons8-share_2_filled")
     static let multipleUsersIcon = UIImage.init(named: "")
     static let heartIcon = UIImage.init(named: "")
-    
+    static let checkedIcon = UIImage.init(named: "checkedIcon")
+    static let unCheckedIcon = UIImage.init(named: "unCheckedIcon")
 }

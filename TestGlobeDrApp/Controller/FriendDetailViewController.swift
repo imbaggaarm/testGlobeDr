@@ -8,13 +8,20 @@
 
 import UIKit
 
-class FriendDetailViewController: BaseViewController {
+class FriendDetailViewController: BaseViewController, FriendsViewControllerDelegate {
+
+    var userViewModel: UserViewModel? {
+        didSet {
+            showData()
+        }
+    }
+    
     
     let imgVAvatar: UIImageView = {
         let temp = UIImageView()
-        temp.backgroundColor = AppColors.themeColor
+        temp.backgroundColor = AppColors.white
         temp.contentMode = .scaleAspectFill
-        temp.image = AppIcons.demoAvatarImage
+        temp.clipsToBounds = true
         return temp
     }()
     
@@ -23,13 +30,11 @@ class FriendDetailViewController: BaseViewController {
         temp.backgroundColor = AppColors.white
         temp.numberOfLines = 0
         temp.font = AppFonts.friendDetailVCDescriptionFont
-        temp.text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
         return temp
     }()
     
     override func setUpNavigationBar() {
         super.setUpNavigationBar()
-        title = "John Doe"
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -60,5 +65,21 @@ class FriendDetailViewController: BaseViewController {
         do {
             view.addConstraintsWith(format: "H:|-10-[v0]-10-|", views: lblDescription)
         }
+    }
+    
+    func showData() {
+        if let userViewModel = userViewModel {
+            print(userViewModel)
+            imgVAvatar.image = userViewModel.avatar
+            title = userViewModel.name
+            lblDescription.text = userViewModel.userDescription
+        }
+    }
+}
+
+//MARK: FriendsViewControllerDelegate
+extension FriendDetailViewController {
+    func friendsViewControllerDidSelectUser(friendsVC: FriendsViewController, user: UserViewModel) {
+        userViewModel = user
     }
 }

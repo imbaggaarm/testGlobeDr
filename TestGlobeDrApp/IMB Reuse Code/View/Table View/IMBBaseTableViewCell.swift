@@ -15,6 +15,7 @@ class IMBBaseTableViewCell: UITableViewCell
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .white
         setUpLayout()
+        addTarget()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,6 +23,10 @@ class IMBBaseTableViewCell: UITableViewCell
     }
     
     func setUpLayout() {
+        
+    }
+    
+    func addTarget() {
         
     }
 }

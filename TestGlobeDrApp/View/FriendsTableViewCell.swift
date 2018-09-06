@@ -10,9 +10,14 @@ import UIKit
 
 class FriendsTableViewCell: IMBBaseTableViewCell {
     
+    var user: UserViewModel? {
+        didSet {
+            showData()
+        }
+    }
     let avatarImgView: UIImageView = {
         let temp = UIImageView()
-        temp.layer.contentsScale = UIScreen.main.scale
+        temp.layer.rasterizationScale = UIScreen.main.scale
         temp.layer.shouldRasterize = true
         temp.image = AppIcons.demoAvatarImage
         temp.backgroundColor = AppColors.white
@@ -28,7 +33,7 @@ class FriendsTableViewCell: IMBBaseTableViewCell {
     
     let lblDescription: UILabel = {
         let temp = UILabel()
-        temp.text = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        temp.text = ""
         temp.numberOfLines = 2
         return temp
     }()
@@ -36,10 +41,10 @@ class FriendsTableViewCell: IMBBaseTableViewCell {
     let checkBox: UIButton = {
         let temp = UIButton()
         
-        temp.setBackgroundImage(nil, for: .selected)
-        temp.setBackgroundImage(nil, for: .normal)
+        temp.setBackgroundImage(AppIcons.checkedIcon, for: .selected)
+        temp.setBackgroundImage(AppIcons.unCheckedIcon, for: .normal)
         
-        temp.backgroundColor = .red
+        temp.backgroundColor = AppColors.white
         return temp
     }()
     
@@ -73,6 +78,29 @@ class FriendsTableViewCell: IMBBaseTableViewCell {
         do {
             checkBox.topAnchor(equalTo: lblName.topAnchor)
             checkBox.makeSquare(size: 20)
+        }
+    }
+    
+    //MARK: - ADD TARGET FOR CHECKBOX
+    override func addTarget() {
+        super.addTarget()
+        checkBox.addTarget(self, action: #selector(didTapCheckbox), for: .touchUpInside)
+    }
+    
+    @objc func didTapCheckbox() {
+        defer {
+            checkBox.isSelected = !checkBox.isSelected
+        }
+        user?.changeSelectedState(to: checkBox.isSelected)
+    }
+    
+    //MARK: - SHOW DATA
+    func showData() {
+        if let user = user {
+            avatarImgView.image = user.avatar
+            lblDescription.text = user.userDescription
+            lblName.text = user.name
+            checkBox.isSelected = user.isSelected
         }
     }
 }
